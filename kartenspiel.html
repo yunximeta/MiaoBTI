@@ -51,6 +51,49 @@
     </div>
 
 </div>
-</body
+
+    <input id="input" placeholder="输入">
+<button onclick="add()">添加</button>
+
+<p>数量：<span id="count">0</span></p>
+<ul id="list"></ul>
+
+
+
+    <script>
+let data = [];
+
+function add() {
+    let text = document.getElementById("input").value;
+    data.push(text);
+
+    document.getElementById("input").value = "";
+    render();
+}
+
+function remove(i) {
+    data.splice(i, 1);
+    render();
+}
+
+function render() {
+    let list = document.getElementById("list");
+    list.innerHTML = "";
+
+    for (let i = 0; i < data.length; i++) {
+        list.innerHTML += `
+            <li>
+                ${data[i]}
+                <button onclick="remove(${i})">删除</button>
+            </li>
+        `;
+    }
+
+    document.getElementById("count").innerText = data.length;
+}
+</script>
+    
+</body>
 
 </html>
+
