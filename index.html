@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>我的第一个网页</title>
+<style>
+body {
+    background-color: #0000ff;
+    font-family: Arial;
+}
+
+h1 {
+    color: red;
+    text-align: center;
+}
+
+p {
+    color: green;
+    font-size: 30px;
+}
+
+
+<p id="text">导航</p>
+
+
+img {
+    width: 10px;
+    border-radius: 10px;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
+    gap: 20px;
+}
+
+.box {
+    background-color: lightblue;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.m {
+    display: flex;
+    justify-content: center
+}
+
+.s {
+    font-size: 30px;
+    color: black;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    background: #555;
+    padding: 10px 20px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+}
+
+.nav a:hover {
+    color: green;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="nav">
+    <div>MySite</div>
+
+    <div>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="box">A</div>
+    <div class="box">B</div>
+    <div class="box">C</div>
+</div>
+
+<div class="m">
+    <div class="s">A</div>
+    <div class="s"><a href="kartenspiel.html">kortenspil</a></div>
+    
+</div>
+
+<h1>你好，网页世界</h1>
+
+<p>这是我的第一个HTML页面。</p>
+
+<button onclick="changeText()">点我</button>
+<h2 id="text">不要点</h2>
+
+
+<input id="input" placeholder="输入点什么">
+<button onclick="show()">提交</button>
+
+<p>vousavezecris</p>
+<p id="out"></p>
+
+
+<p>jesuisentraindapprendrecet truc</p>
+
+<h2>我的兴趣</h2>
+
+<ul>
+    <li>编程</li>
+    <li>音乐</li>
+    <li>游戏</li>
+    <li>wtever</li>
+   </ul>
+
+<h2>一张图片</h2>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg" alt="图">
+
+<h2>导航</h2>
+
+<a href="about.html">去关于页面</a>
+
+
+
+
+<script>
+function show() {
+    let text = document.getElementById("input").value;
+    document.getElementById("out").innerText = text;
+}
+
+function changeText() {
+    document.getElementById("text").innerText = "彳亍";
+}
+
+</script>
+
+
+</body>
+</html>
