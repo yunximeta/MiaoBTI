@@ -37,20 +37,28 @@
 
 
 
-    <script>
-let data = [];
+<script>
+let data = JSON.parse(localStorage.getItem("data")) || [];
 
 function add() {
     let text = document.getElementById("input").value;
     data.push(text);
 
     document.getElementById("input").value = "";
+
+    save();
     render();
 }
 
 function remove(i) {
     data.splice(i, 1);
+
+    save();
     render();
+}
+
+function save() {
+    localStorage.setItem("data", JSON.stringify(data));
 }
 
 function render() {
@@ -68,6 +76,8 @@ function render() {
 
     document.getElementById("count").innerText = data.length;
 }
+
+render();
 </script>
     
 </body>
